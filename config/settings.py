@@ -27,6 +27,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = ["*"]
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+APPEND_SLASH = True
 
 
 # Application definition
@@ -43,11 +44,10 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
 ]
 
-MIDDLEWARE = [
+MIDDLEWARE = [ 
     "django.middleware.security.SecurityMiddleware",
     "whitenoise.middleware.WhiteNoiseMiddleware",
     'corsheaders.middleware.CorsMiddleware',
-    "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
